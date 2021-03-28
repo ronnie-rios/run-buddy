@@ -5,9 +5,9 @@
 }
 
 :root {
-    --primary-color: var(--primary-color);
-    --secondary-color: var(--secondary-color);
-    --tertiary-color: var(--tertiary-color);
+    --primary-color: #fce138;
+    --secondary-color: #024e76;
+    --tertiary-color: #39a6b2;
 }
 
 body {
@@ -57,14 +57,13 @@ body {
       align-items: center;
       list-style: none;
   }
-  header nav ul li {
-      display: inline;
-      text-shadow: 0 0 10px rgba( 0. 0. 0. 0.5);
-  }
+  
+  
   header nav ul li a {
       padding: 10 15px;
       font-weight: lighter;
       font-size: 1.55vw;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   header nav ul li a:hover {
@@ -337,10 +336,6 @@ section {
     justify-content: space-between;
 }
 
-.step:nth-child(even) {
-    border-bottom: 1px solid var(--tertiary-color);
-}
-
 .step:not(:last-child) {
     border-bottom: 1px solid var(--tertiary-color);
 }
@@ -572,32 +567,115 @@ section {
     }
 }
 
-@media screen and (max-width: 575px) {
-    .hero-form-button {
-        width: 100%;
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    header {
+      padding-bottom: 0;
+      justify-content: center;
+      position: relative;
     }
-
-    .setction-title {
-        width: 95%;
+  
+    header h1 {
+      width: 100%;
+      text-align: center;
     }
-
-    .intro p {
-        width: 100%;
+  
+    header nav ul {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: center;
     }
-
+  
+    header nav ul li a {
+      font-size: 20px;
+    }
+  
+    footer h2, footer div {
+      text-align: center;
+      width: 100%;
+    }
+  
+    .hero-cta, .hero-form {
+      width: 100%;
+    }
+    
+    .hero-cta {
+      text-align: center;
+    }
+  
+    .section-title {
+      width: 80%;
+    }
+    
     .trainer {
-        flex: 0 100%;
+      flex: 0 70%;
     }
-
+    
+    .contact-info iframe{
+      flex: 1 100%;
+    }
+  }
+  
+  /* MEDIA QUERY FOR TABLETS AND SMALLER */
+  @media screen and (max-width: 768px) {
+    section {
+      padding: 30px 15px;
+    }
+  
+    .step h3 {
+      flex: 1 100%;
+      text-align: center;
+    }
+  
+    .step-info {
+      flex: 2 100%;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    .step-img {
+      flex: 0 32%;
+      margin-right: 0;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .step-text {
+      flex: 100%;  
+    }
+  
+    .trainer-bio h3, .trainer-bio h4 {
+      display: block;
+    }
+  }
+  
+  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+  @media screen and (max-width: 575px) {
+    .hero-form button {
+      width: 100%;
+    }
+  
+    .section-title {
+      width: 95%;
+    }
+  
+    .intro p {
+      width: 100%;
+    }
+  
+    .trainer {
+      flex: 0 100%;
+    }
+  
     .contact-info {
-        text-align: center;
+      text-align: center;
     }
-
+  
     .contact-info > * {
-        flex: 0 100%;
+      flex: 0 100%;
     }
-
+  
     .contact-form {
-        order: 3;
+      order: 3;
     }
-}
+  }
